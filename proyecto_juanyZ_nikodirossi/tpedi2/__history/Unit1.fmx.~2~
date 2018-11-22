@@ -1,0 +1,63 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Grid1: TGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 56.000000000000000000
+    Position.Y = 112.000000000000000000
+    TabOrder = 5
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 75.000000000000000000
+  end
+  object BindNavigator1: TBindNavigator
+    Position.X = 40.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\niko\Desktop\isft 151\Nueva carpeta\tpedi\tped' +
+        'i.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 560
+    Top = 408
+  end
+  object FDQueryCreateTable: TSQLQuery
+    Params = <>
+    SQL.Strings = (
+      'CREATE TABLE IF NOT EXISTS Item (tpedi  TEXT NOT NULL)')
+    Left = 560
+    Top = 352
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDQuery1
+    ScopeMappings = <>
+    Left = 576
+    Top = 296
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select tpedi from Item')
+    Left = 496
+    Top = 296
+  end
+end

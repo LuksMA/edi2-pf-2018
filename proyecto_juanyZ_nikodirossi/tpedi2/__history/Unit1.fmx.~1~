@@ -1,0 +1,30 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Users\niko\Desktop\isft 151\Nueva carpeta\tpedi\tped' +
+        'i.db'
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 560
+    Top = 408
+  end
+  object FDQueryCreateTable: TSQLQuery
+    Params = <>
+    SQL.Strings = (
+      'CREATE TABLE IF NOT EXISTS Item (tpedi  TEXT NOT NULL)')
+    Left = 560
+    Top = 352
+  end
+end
