@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <Data.DB.hpp>
+#include <Data.FMTBcd.hpp>
+#include <Data.SqlExpr.hpp>
+#include <FireDAC.Comp.Client.hpp>
+#include <FireDAC.FMXUI.Wait.hpp>
+#include <FireDAC.Phys.hpp>
+#include <FireDAC.Phys.Intf.hpp>
+#include <FireDAC.Phys.SQLite.hpp>
+#include <FireDAC.Phys.SQLiteDef.hpp>
+#include <FireDAC.Stan.Async.hpp>
+#include <FireDAC.Stan.Def.hpp>
+#include <FireDAC.Stan.Error.hpp>
+#include <FireDAC.Stan.ExprFuncs.hpp>
+#include <FireDAC.Stan.Intf.hpp>
+#include <FireDAC.Stan.Option.hpp>
+#include <FireDAC.Stan.Pool.hpp>
+#include <FireDAC.UI.Intf.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TFDConnection *FDConnection1;
+	TSQLQuery *FDQueryCreateTable;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
